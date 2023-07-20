@@ -15,3 +15,11 @@ LABEL_LEVEL_POS = (WIN_WIDTH // 4, WIN_HEIGHT // 3 * 2 - 32)
 BUTTON_PLAY_POS = (WIN_WIDTH // 4, WIN_HEIGHT // 3 * 2)
 BUTTON_DOCS_POS = (WIN_WIDTH // 2, WIN_HEIGHT // 3 * 2)
 BUTTON_QUIT_POS = (WIN_WIDTH // 4 * 3, WIN_HEIGHT // 3 * 2)
+
+# LEVEL SPAWN
+LEVEL = {
+    '1-1': {
+        'point': 10,
+        'zombie': 'normal'
+    }
+}

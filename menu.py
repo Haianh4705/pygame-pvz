@@ -42,7 +42,7 @@ class Button:
     
     def update(self):
         if self.check_click():
-            self.game.quit()
+            self.func
     
     def render(self, surf):
         surf.blit(self.img, self.rect)
@@ -61,13 +61,14 @@ class GameMenu:
     
     def init_label(self):
         self.label.append(Label(LABEL_NAME_POS, 'PvZ', self.big_font))
-        self.label.append(Label(LABEL_LEVEL_POS, str(self.game.current_level), self.tiny_font))
+        self.label.append(Label(LABEL_LEVEL_POS, f'{self.game.current_world}-{self.game.current_level}', self.tiny_font))
     
-    def clear_label(self):
+    def clear(self):
         self.label.clear()
+        self.btn.clear()
     
     def init_btn(self):
-        self.btn.append(Button(BUTTON_PLAY_POS, 'Play', self.small_font, self.game.quit))
+        self.btn.append(Button(BUTTON_PLAY_POS, 'Play', self.small_font, self.game.in_game_state))
         self.btn.append(Button(BUTTON_DOCS_POS, 'Docs', self.small_font, self.game.quit))
         self.btn.append(Button(BUTTON_QUIT_POS, 'Quit', self.small_font, self.game.quit))
     
