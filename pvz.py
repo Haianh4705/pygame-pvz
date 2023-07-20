@@ -17,7 +17,9 @@ class Pvz:
         self.clock = pygame.time.Clock()
 
         self.assets = {
-            'single-shooter': load_imgs('single-shooter')
+            'peashooter': load_imgs('single-peashooter'),
+            'sunflower': load_imgs('single-sunflower'),
+            'normal-zombie': load_img('normal-zombie/1.png')
         }
 
         self.current_level = '1-1'
