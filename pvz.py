@@ -4,6 +4,7 @@ from utils import load_img, load_imgs
 from menu import GameMenu
 
 class Pvz:
+    ALL_STATE = ['game-menu', 'docs', 'in-game', 'pause']
     def __init__(self):
         pygame.init()
         pygame.display.set_caption('PvZ')
@@ -18,6 +19,9 @@ class Pvz:
         self.assets = {
             'single-shooter': load_imgs('single-shooter')
         }
+
+        self.current_level = '1-1'
+        self.level = {}
 
         self.game_menu = GameMenu(self)
     

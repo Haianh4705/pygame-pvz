@@ -52,6 +52,7 @@ class GameMenu:
         self.game = game
         self.big_font = pygame.font.Font('data/font/font.ttf', 128)
         self.small_font = pygame.font.Font('data/font/font.ttf', 64)
+        self.tiny_font = pygame.font.Font('data/font/font.ttf', 32)
         self.label = []
         self.btn = []
 
@@ -60,6 +61,7 @@ class GameMenu:
     
     def init_label(self):
         self.label.append(Label(LABEL_NAME_POS, 'PvZ', self.big_font))
+        self.label.append(Label(LABEL_LEVEL_POS, str(self.game.current_level), self.tiny_font))
     
     def clear_label(self):
         self.label.clear()
